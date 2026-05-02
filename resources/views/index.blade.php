@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Beitna Furniture | Interior Design</title>
+  <link rel="stylesheet" href="{{ asset('css/style.css') }}" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header class="header">
+    <nav class="nav">
+      <h1 class="logo">Beitna Furniture</h1>
+
+      <button class="hamburger" id="hamburger" onclick="toggleNav()">
+        <span></span><span></span><span></span>
+      </button>
+      <div class="nav-overlay" id="navOverlay" onclick="toggleNav()"></div>
+
+      <ul class="nav-links" id="nav-links">
+        <li><a href="{{ route('home') }}" onclick="toggleNav()">Home</a></li>
+        <li><a href="{{ route('shop') }}" onclick="toggleNav()">Shop</a></li>
+        <li><a href="{{ route('cart') }}" onclick="toggleNav()">Cart</a></li>
+        <li><a href="{{ route('login') }}" onclick="toggleNav()">Login</a></li>
+        <li><a href="{{ route('register') }}" onclick="toggleNav()">Register</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-content">
+      <h2>Your Home, Our Passion</h2>
+      <p>Beauty and elegance for every room</p>
+      <a href="{{ route('shop') }}" class="btn">Explore Our Collection</a>
+    </div>
+  </section>
+
+  <!-- STATS -->
+  <section class="stats-section" id="stats">
+    <div class="stat">
+      <h2>
+        <span class="bar">|</span>
+        <span class="counter" data-target="250">0</span>
+        <span class="plus">+</span>
+      </h2>
+      <p>Projects Completed</p>
+    </div>
+
+    <div class="stat">
+      <h2>
+        <span class="bar">|</span>
+        <span class="counter" data-target="120">0</span>
+        <span class="plus">+</span>
+      </h2>
+      <p>Happy Clients</p>
+    </div>
+
+    <div class="stat">
+      <h2>
+        <span class="bar">|</span>
+        <span class="counter" data-target="25">0</span>
+        <span class="plus">+</span>
+      </h2>
+      <p>Years of Experience</p>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about-section">
+    <span>_____ Future Design Studio _____</span>
+
+    <div class="about-content"><br>
+      <h2>Where Design Meets Comfort</h2>
+      <p>
+        At Beitna Furniture, we believe that every space tells a story.
+        Our community is dedicated to creating interiors that balance
+        elegance, comfort, and timeless design. From carefully crafted
+        furniture to artistic details, we help transform houses into homes.
+      </p>
+    </div>
+
+    <div class="about-images">
+      <img src="{{ asset('images/aa.jpeg') }}" alt="Interior design work">
+      <img src="{{ asset('images/bb.jpeg') }}" alt="Interior design work">
+      <img src="{{ asset('images/cc.jpeg') }}" alt="Interior design work">
+      <img src="{{ asset('images/dd.jpeg') }}" alt="Interior design work">
+    </div>
+  </section>
+
+  <!-- WHAT WE DO -->
+  <section class="services">
+    <div class="services-header">
+      <span class="small-title">WHAT WE DO</span>
+      <h2>This is what we're best at</h2>
+    </div>
+
+    <div class="services-row">
+      <div class="service-item">
+        <h3>Chairs</h3>
+        <p>Discover unique chairs that blend comfort and style. Handcrafted with attention to detail.</p>
+        <a href="{{ route('shop') }}#chairs">GET A QUOTE</a>
+      </div>
+
+      <div class="service-item">
+        <h3>Tables</h3>
+        <p>Tables with precision and design. Crafted from high-quality materials for home or office.</p>
+        <a href="{{ route('shop') }}#tables">GET A QUOTE</a>
+      </div>
+
+      <div class="service-item">
+        <h3>Sofas</h3>
+        <p>Experience luxury and comfort with sofas designed for modern interiors.</p>
+        <a href="{{ route('shop') }}#sofas">GET A QUOTE</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- OUR WORK -->
+  <section class="our-work">
+    <div class="our-work-header">
+      <br><br>
+      <span>_____ OUR WORK _____</span>
+      <h2>More of our work</h2>
+    </div>
+
+    <div class="work-gallery">
+      <img src="{{ asset('images/D.jpeg') }}" alt="Beitna Furniture work">
+      <img src="{{ asset('images/B.jpeg') }}" alt="Beitna Furniture work">
+      <img src="{{ asset('images/C.jpeg') }}" alt="Beitna Furniture work">
+      <img src="{{ asset('images/A.jpeg') }}" alt="Beitna Furniture work">
+      <img src="{{ asset('images/E.jpeg') }}" alt="Beitna Furniture work">
+      <img src="{{ asset('images/F.jpeg') }}" alt="Beitna Furniture work">
+      <img src="{{ asset('images/I.jpeg') }}" alt="Beitna Furniture work">
+      <img src="{{ asset('images/jj.jpeg') }}" alt="Beitna Furniture work">
+      <img src="{{ asset('images/G.jpeg') }}" alt="Beitna Furniture work">
+      <img src="{{ asset('images/kk.jpeg') }}" alt="Beitna Furniture work">
+    </div>
+  </section>
+
+  <!-- TESTIMONIAL -->
+  <section class="testimonial-section">
+    <div class="testimonial-card">
+      <div class="quote-icon">"</div>
+      <h3 class="testimonial-title">Custom kitchen table is<br> a game-changer!</h3>
+      <p class="testimonial-text">
+        Working with Beitna Furniture was a wonderful experience.
+        Seamless craftsmanship. Flawless quality.
+      </p>
+      <div class="testimonial-author">
+        <div class="author-avatar"></div>
+        <span>— Nour H.</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-section footer-info">
+        <h3>Beitna Furniture</h3>
+        <p>Luxury interior design and furniture craftsmanship. Creating beautiful spaces for over 25 years.</p>
+        <div class="social-links">
+          <a href="https://www.facebook.com/people/Beit-Al-Hajj/61586649204191/" title="Facebook">f</a>
+          <a href="https://www.instagram.com/beit_al_hajj/?hl=en" title="Instagram">@</a>
+        </div>
+      </div>
+
+      <div class="footer-section">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="{{ route('home') }}">Home</a></li>
+          <li><a href="{{ route('login') }}">Login</a></li>
+          <li><a href="{{ route('register') }}">Register</a></li>
+          <li><a href="{{ route('shop') }}">Shop</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h3>Services</h3>
+        <ul>
+          <li><a href="#">Custom Furniture</a></li>
+          <li><a href="#">Interior Design</a></li>
+          <li><a href="#">Consultation</a></li>
+          <li><a href="#">Installation</a></li>
+          <li><a href="#">Maintenance</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section footer-contact">
+        <h3>Contact Info</h3>
+        <p><strong>Email:</strong><br><a href="mailto:hajjtaleb20@gmail.com" style="color:inherit">hajjtaleb20@gmail.com</a></p>
+        <p><strong>Phone:</strong><br><a href="tel:+96170833728" style="color:inherit">+961 70 83 37 28</a></p>
+        <p><strong>Location:</strong><br>Lebanon, UAE, KSA</p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="footer-bottom-left">© 2026 Beitna Furniture. All rights reserved.</div>
+    </div>
+  </footer>
+
+  <script src="{{ asset('js/animation.js') }}"></script>
+
+</body>
+</html>
