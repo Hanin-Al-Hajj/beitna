@@ -18,11 +18,11 @@
   </button>
   <div class="nav-overlay" id="navOverlay" onclick="toggleNav()"></div>
  <ul class="nav-links" id="nav-links">
-    <li><a href="index.html">Home</a></li>
-    <li><a href="shopping.html">Shop</a></li>
-    <li><a href="cart.html">Cart</a></li>
-    <li><a href="login.html">Login</a></li>
-    <li><a href="register.html">Register</a></li>
+    <li><a href="{{ route("homePage") }}">Home</a></li>
+    <li><a href="{{ route("shop") }}">Shop</a></li>
+    <li><a href="{{ route("cart") }}">Cart</a></li>
+    <li><a href="{{ route("login") }}">Login</a></li>
+    <li><a href="{{ route("register") }}">Register</a></li>
   </ul>
 </nav>
 </header>
@@ -46,28 +46,28 @@
 <section class="cards">
   <div class="card" id="chairs">
     <img src="images/chair.jpeg" alt="chair">
-    <div class="card-body"> 
+    <div class="card-body">
        <p class="card-category">CHAIRS</p>
     <h3 class="card-title">Elegant Upholstered Armchair</h3>
     <p class="card-desc">Premium wooden armchair with soft tufted upholstery and refined detailing</p>
  <div class="card-footer">
       <span class="card-price">$459</span>
-    <button class="card-btn" onclick="window.location.href='cart.html'">
+    <button class="card-btn" onclick="window.location.href='{{ route("cart") }}'">
   Add to Cart
 </button>
  </div>
   </div>
 </div>
-  
+
  <div class="card" id="sofas">
     <img src="images/sofa.jpeg" alt="Sofa">
-    <div class="card-body"> 
+    <div class="card-body">
        <p class="card-category">SOFAS</p>
     <h3 class="card-title">Velvet Blue Lounge Sofa</h3>
     <p class="card-desc">Contemporary teal velvet sofa with bold color and an elegant form</p>
  <div class="card-footer">
       <span class="card-price">$2,459</span>
-   <button class="card-btn" onclick="window.location.href='cart.html'">
+   <button class="card-btn" onclick="window.location.href='{{ route("cart") }}'">
   Add to Cart
 </button>
  </div>
@@ -75,20 +75,20 @@
 </div>
  <div class="card" id="tables">
     <img src="images/table.jpeg" alt="Table">
-    <div class="card-body"> 
+    <div class="card-body">
        <p class="card-category">TABLES</p>
     <h3 class="card-title">Pixel Block Coffee Table</h3>
     <p class="card-desc">Sculptural wooden coffee table with 3D geometric block design</p>
  <div class="card-footer">
       <span class="card-price">$1,259</span>
-   <button class="card-btn" onclick="window.location.href='cart.html'">
+   <button class="card-btn" onclick="window.location.href='{{ route("cart") }}'">
   Add to Cart
 </button>
  </div>
   </div>
 </div>
 </section>
-  
+
   <!-- FOOTER -->
   <footer class="footer">
     <div class="footer-content">
@@ -109,10 +109,10 @@
       <div class="footer-section">
         <h3>Quick Links</h3>
         <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="login.html">Login</a></li>
-          <li><a href="register.html">Register</a></li>
-          <li><a href="shopping.html">Shop</a></li>
+          <li><a href="{{ route("homePage") }}">Home</a></li>
+          <li><a href="{{ route("login") }}">Login</a></li>
+          <li><a href="{{ route("register") }}">Register</a></li>
+          <li><a href="{{ route("shop") }}">Shop</a></li>
         </ul>
       </div>
 
@@ -144,7 +144,7 @@
       </div>
     </div>
   </footer>
-  
+
   <script src="{{ asset('js/animation.js') }}"></script>
   <script src="{{ asset('js/shopping.js') }}"></script>
 

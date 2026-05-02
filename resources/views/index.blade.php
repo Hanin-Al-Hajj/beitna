@@ -18,11 +18,11 @@
   </button>
   <div class="nav-overlay" id="navOverlay" onclick="toggleNav()"></div>
  <ul class="nav-links" id="nav-links">
-    <li><a href="index.html">Home</a></li>
-    <li><a href="shopping.html">Shop</a></li>
-    <li><a href="cart.html">Cart</a></li>
-    <li><a href="login.html">Login</a></li>
-    <li><a href="register.html">Register</a></li>
+    <li><a href="{{ route('homePage') }}">Home</a></li>
+    <li><a href="{{ route('shop') }}">Shop</a></li>
+    <li><a href="{{ route('cart') }}">Cart</a></li>
+    <li><a href="{{ route('login') }}">Login</a></li>
+    <li><a href="{{ route('register') }}">Register</a></li>
   </ul>
 </nav>
 </header>
@@ -32,11 +32,11 @@
     <div class="hero-content">
       <h2>Your Home, Our Passion</h2>
       <p>Beauty and elegance for every room</p>
-      <a href="shopping.html" class="btn">Explore Our Collection</a>
+      <a href="{{ route('shop') }}" class="btn">Explore Our Collection</a>
     </div>
   </section>
-  
-  
+
+
  <section class="stats-section" id="stats">
   <div class="stat">
     <h2>
@@ -104,7 +104,7 @@
         Discover unique chairs that blend comfort and style.
         Handcrafted with attention to detail.
       </p>
-      <a href="shopping.html#chairs">GET A QUOTE</a>
+      <a href="{{ route('shop') }}#chairs">GET A QUOTE</a>
     </div>
 
     <div class="service-item">
@@ -113,7 +113,7 @@
         Tables with precision and design. Crafted from
         high-quality materials for home or office.
       </p>
-      <a href="shopping.html#tables">GET A QUOTE</a>
+      <a href="{{ route('shop') }}#tables">GET A QUOTE</a>
     </div>
 
     <div class="service-item">
@@ -123,7 +123,7 @@
         for modern interiors.
       </p>
       <br>
-      <a href="shopping.html#sofas">GET A QUOTE</a>
+      <a href="{{ route('shop') }}#sofas">GET A QUOTE</a>
     </div>
   </div>
 </section>
@@ -150,7 +150,7 @@
     <img src="images/jj.jpeg" alt="Beitna Furniture work">
     <img src="images/G.jpeg" alt="Beitna Furniture work">
     <img src="images/kk.jpeg" alt="Beitna Furniture work">
-    
+
   </div>
 
 </section>
@@ -199,10 +199,10 @@
       <div class="footer-section">
         <h3>Quick Links</h3>
         <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="login.html">Login</a></li>
-          <li><a href="register.html">Register</a></li>
-          <li><a href="shopping.html">Shop</a></li>
+          <li><a href="{{ route('homePage') }}">Home</a></li>
+          <li><a href="{{ route('login') }}">Login</a></li>
+          <li><a href="{{ route('register') }}">Register</a></li>
+          <li><a href="{{ route('shop') }}">Shop</a></li>
         </ul>
       </div>
 
@@ -234,7 +234,7 @@
       </div>
     </div>
   </footer>
-  
+
 
   <script src="{{ asset('js/animation.js') }}"></script>
 
