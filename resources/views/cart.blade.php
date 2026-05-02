@@ -20,11 +20,11 @@
     <div class="nav-overlay" id="navOverlay" onclick="toggleNav()"></div>
 
     <ul class="nav-links" id="nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="shopping.html">Shop</a></li>
-      <li><a href="cart.html">Cart</a></li>
-      <li><a href="login.html">Login</a></li>
-      <li><a href="register.html">Register</a></li>
+      <li><a href="{{ route("homePage") }}">Home</a></li>
+      <li><a href="{{ route("shop") }}">Shop</a></li>
+      <li><a href="{{ route("cart") }}">Cart</a></li>
+      <li><a href="{{ route("login") }}">Login</a></li>
+      <li><a href="{{ route("register") }}">Register</a></li>
     </ul>
   </nav>
 </header>
@@ -45,7 +45,7 @@
 <p class="order-subtitle">Every piece deserves a home — tell us where to bring yours</p>
 <form action="POST" class="order-form" id="order-form">
   <div class="form-label"><span>Personal Information</span></div>
- 
+
   <div class="form-input">
     <label for="fname">First Name:</label>
     <input type="text" name="fname" id="fname" placeholder="Enter your first name" required>

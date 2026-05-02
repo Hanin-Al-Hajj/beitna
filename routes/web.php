@@ -7,7 +7,11 @@ Route::get('/', function () {
     return view('index');
 })->name('home');
 
-Route::get('/shop', function () {
+Route::get('/index',function(){
+    return view("index");
+})->name('homePage');
+
+Route::get('/shopping', function () {
     return view('shopping');
 })->name('shop');
 
