@@ -9,78 +9,77 @@
 </head>
 <body>
 
-  <header class="header">
-    <nav class="nav">
-      <h1 class="logo">Beitna Furniture</h1>
+ <header class="header">
+  <nav class="nav">
+    <h1 class="logo">Beitna Furniture</h1>
 
-      <button class="hamburger" id="hamburger" onclick="toggleNav()">
-        <span></span><span></span><span></span>
-      </button>
-      <div class="nav-overlay" id="navOverlay" onclick="toggleNav()"></div>
+    <button class="hamburger" id="hamburger" onclick="toggleNav()">
+      <span></span><span></span><span></span>
+    </button>
 
-      <ul class="nav-links" id="nav-links">
-        <li><a href="{{ route('home') }}" onclick="toggleNav()">Home</a></li>
-        <li><a href="{{ route('shop') }}" onclick="toggleNav()">Shop</a></li>
-        <li><a href="{{ route('cart') }}" onclick="toggleNav()">Cart</a></li>
-        <li><a href="{{ route('login') }}" onclick="toggleNav()">Login</a></li>
-        <li><a href="{{ route('register') }}" onclick="toggleNav()">Register</a></li>
-      </ul>
-    </nav>
-  </header>
+    <div class="nav-overlay" id="navOverlay" onclick="toggleNav()"></div>
 
-  <section class="cart-section">
-    <h1 class="cart-title">Your Cart</h1>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="shopping.html">Shop</a></li>
+      <li><a href="cart.html">Cart</a></li>
+      <li><a href="login.html">Login</a></li>
+      <li><a href="register.html">Register</a></li>
+    </ul>
+  </nav>
+</header>
 
-    <div id="cart-items" class="cart-items"></div>
+<section class="cart-section">
+  <h1 class="cart-title">Your Cart</h1>
 
-    <div class="cart-summary">
-      <div id="total-price" class="total">Total: $0</div>
-      <button class="checkout-btn" onclick="showOrderForm()">Place Order</button>
-    </div>
-  </section>
+  <div id="cart-items" class="cart-items"></div>
 
-  <section class="order-section" id="order-section" style="display: none;">
-    <h2>Complete Your Order</h2>
-    <p class="order-subtitle">Every piece deserves a home — tell us where to bring yours</p>
+  <div class="cart-summary">
+    <div id="total-price" class="total">Total: $0</div>
+    <button class="checkout-btn" onclick="showOrderForm()">Place Order</button>
+  </div>
+</section>
 
-    <form action="POST" class="order-form" id="order-form">
-      <div class="form-label"><span>Personal Information</span></div>
+<section class="order-section" id="order-section" style="display: none;">
+<h2>Complete Your Order</h2>
+<p class="order-subtitle">Every piece deserves a home — tell us where to bring yours</p>
+<form action="POST" class="order-form" id="order-form">
+  <div class="form-label"><span>Personal Information</span></div>
+ 
+  <div class="form-input">
+    <label for="fname">First Name:</label>
+    <input type="text" name="fname" id="fname" placeholder="Enter your first name" required>
+  </div>
 
-      <div class="form-input">
-        <label for="fname">First Name:</label>
-        <input type="text" name="fname" id="fname" placeholder="Enter your first name" required>
-      </div>
+   <div class="form-input">
+    <label for="lname">Last Name:</label>
+    <input type="text" name="lname" id="lname" placeholder="Enter your last name" required>
+  </div>
 
-      <div class="form-input">
-        <label for="lname">Last Name:</label>
-        <input type="text" name="lname" id="lname" placeholder="Enter your last name" required>
-      </div>
+   <div class="form-input">
+    <label for="email">Email:</label>
+    <input type="email" name="email" id="email" placeholder="Enter your email" required>
+  </div>
 
-      <div class="form-input">
-        <label for="email">Email:</label>
-        <input type="email" name="email" id="email" placeholder="Enter your email" required>
-      </div>
+    <div class="form-input">
+    <label for="phone">Phone Number:</label>
+    <input type="tel" name="phone" id="phone" placeholder="Enter your phone number" required>
+  </div>
 
-      <div class="form-input">
-        <label for="phone">Phone Number:</label>
-        <input type="tel" name="phone" id="phone" placeholder="Enter your phone number" required>
-      </div>
+   <div class="form-input">
+    <label for="address">Address:</label>
+    <input type="text" name="address" id="address" placeholder="Enter your address" required>
+  </div>
 
-      <div class="form-input">
-        <label for="address">Address:</label>
-        <input type="text" name="address" id="address" placeholder="Enter your address" required>
-      </div>
-
-      <div class="form-input">
-        <label for="price">Total Price:</label>
-        <input type="text" name="price" id="price" readonly>
-      </div>
-
-      <div class="form-button">
-        <button type="submit">Confirm Order</button>
-      </div>
-    </form>
-  </section>
+   <div class="form-input">
+    <label for="price">Total Price:</label>
+    <input type="text" name="price" id="price" readonly>
+  </div>
+ <div class="form-button">
+   <button type="submit">Confirm Order</button>
+  </div>
+</form>
+</section>
 
   <script src="{{ asset('js/cart.js') }}"></script>
   <script src="{{ asset('js/animation.js') }}"></script>

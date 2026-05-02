@@ -9,174 +9,204 @@
 <body>
 
   <!-- NAVBAR -->
-  <header class="header">
-    <nav class="nav">
-      <h1 class="logo">Beitna Furniture</h1>
+ <header class="header">
+<nav class="nav">
+  <h1 class="logo">Beitna Furniture</h1>
 
-      <button class="hamburger" id="hamburger" onclick="toggleNav()">
-        <span></span><span></span><span></span>
-      </button>
-      <div class="nav-overlay" id="navOverlay" onclick="toggleNav()"></div>
-
-      <ul class="nav-links" id="nav-links">
-        <li><a href="{{ route('home') }}" onclick="toggleNav()">Home</a></li>
-        <li><a href="{{ route('shop') }}" onclick="toggleNav()">Shop</a></li>
-        <li><a href="{{ route('cart') }}" onclick="toggleNav()">Cart</a></li>
-        <li><a href="{{ route('login') }}" onclick="toggleNav()">Login</a></li>
-        <li><a href="{{ route('register') }}" onclick="toggleNav()">Register</a></li>
-      </ul>
-    </nav>
-  </header>
+    <button class="hamburger" id="hamburger" onclick="toggleNav()">
+    <span></span><span></span><span></span>
+  </button>
+  <div class="nav-overlay" id="navOverlay" onclick="toggleNav()"></div>
+ <ul class="nav-links" id="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="shopping.html">Shop</a></li>
+    <li><a href="cart.html">Cart</a></li>
+    <li><a href="login.html">Login</a></li>
+    <li><a href="register.html">Register</a></li>
+  </ul>
+</nav>
+</header>
 
   <!-- HERO -->
   <section class="hero">
     <div class="hero-content">
       <h2>Your Home, Our Passion</h2>
       <p>Beauty and elegance for every room</p>
-      <a href="{{ route('shop') }}" class="btn">Explore Our Collection</a>
+      <a href="shopping.html" class="btn">Explore Our Collection</a>
     </div>
   </section>
+  
+  
+ <section class="stats-section" id="stats">
+  <div class="stat">
+    <h2>
+      <span class="bar">|</span>
+      <span class="counter" data-target="250">0</span>
+      <span class="plus">+</span>
+    </h2>
+    <p>Projects Completed</p>
+  </div>
 
-  <!-- STATS -->
-  <section class="stats-section" id="stats">
-    <div class="stat">
-      <h2>
-        <span class="bar">|</span>
-        <span class="counter" data-target="250">0</span>
-        <span class="plus">+</span>
-      </h2>
-      <p>Projects Completed</p>
-    </div>
+  <div class="stat">
+    <h2>
+      <span class="bar">|</span>
+      <span class="counter" data-target="120">0</span>
+      <span class="plus">+</span>
+    </h2>
+    <p>Happy Clients</p>
+  </div>
 
-    <div class="stat">
-      <h2>
-        <span class="bar">|</span>
-        <span class="counter" data-target="120">0</span>
-        <span class="plus">+</span>
-      </h2>
-      <p>Happy Clients</p>
-    </div>
+  <div class="stat">
+    <h2>
+      <span class="bar">|</span>
+      <span class="counter" data-target="25">0</span>
+      <span class="plus">+</span>
+    </h2>
+    <p>Years of Experience</p>
+  </div>
+</section>
 
-    <div class="stat">
-      <h2>
-        <span class="bar">|</span>
-        <span class="counter" data-target="25">0</span>
-        <span class="plus">+</span>
-      </h2>
-      <p>Years of Experience</p>
-    </div>
-  </section>
 
-  <!-- ABOUT -->
-  <section class="about-section">
-    <span>_____ Future Design Studio _____</span>
+  <!-- ABOUT / DESCRIPTION SECTION -->
+<section class="about-section">
+  <span>_____ Future Design Studio _____</span>
 
-    <div class="about-content"><br>
-      <h2>Where Design Meets Comfort</h2>
+  <div class="about-content"><br>
+    <h2>Where Design Meets Comfort</h2>
+    <p>
+      At Beitna Furniture, we believe that every space tells a story.
+      Our community is dedicated to creating interiors that balance
+      elegance, comfort, and timeless design. From carefully crafted
+      furniture to artistic details, we help transform houses into homes.
+    </p>
+  </div>
+
+  <div class="about-images">
+    <img src="images/aa.jpeg" alt="Interior design work">
+    <img src="images/bb.jpeg" alt="Interior design work">
+    <img src="images/cc.jpeg" alt="Interior design work">
+    <img src="images/dd.jpeg" alt="Interior design work">
+  </div>
+
+</section>
+
+<!-- WHAT WE DO -->
+<section class="services">
+  <div class="services-header">
+    <span class="small-title">WHAT WE DO</span>
+    <h2>This is what we’re best at</h2>
+  </div>
+
+  <div class="services-row">
+    <div class="service-item">
+      <h3>Chairs</h3>
       <p>
-        At Beitna Furniture, we believe that every space tells a story.
-        Our community is dedicated to creating interiors that balance
-        elegance, comfort, and timeless design. From carefully crafted
-        furniture to artistic details, we help transform houses into homes.
+        Discover unique chairs that blend comfort and style.
+        Handcrafted with attention to detail.
       </p>
+      <a href="shopping.html#chairs">GET A QUOTE</a>
     </div>
 
-    <div class="about-images">
-      <img src="{{ asset('images/aa.jpeg') }}" alt="Interior design work">
-      <img src="{{ asset('images/bb.jpeg') }}" alt="Interior design work">
-      <img src="{{ asset('images/cc.jpeg') }}" alt="Interior design work">
-      <img src="{{ asset('images/dd.jpeg') }}" alt="Interior design work">
-    </div>
-  </section>
-
-  <!-- WHAT WE DO -->
-  <section class="services">
-    <div class="services-header">
-      <span class="small-title">WHAT WE DO</span>
-      <h2>This is what we're best at</h2>
+    <div class="service-item">
+      <h3>Tables</h3>
+      <p>
+        Tables with precision and design. Crafted from
+        high-quality materials for home or office.
+      </p>
+      <a href="shopping.html#tables">GET A QUOTE</a>
     </div>
 
-    <div class="services-row">
-      <div class="service-item">
-        <h3>Chairs</h3>
-        <p>Discover unique chairs that blend comfort and style. Handcrafted with attention to detail.</p>
-        <a href="{{ route('shop') }}#chairs">GET A QUOTE</a>
-      </div>
-
-      <div class="service-item">
-        <h3>Tables</h3>
-        <p>Tables with precision and design. Crafted from high-quality materials for home or office.</p>
-        <a href="{{ route('shop') }}#tables">GET A QUOTE</a>
-      </div>
-
-      <div class="service-item">
-        <h3>Sofas</h3>
-        <p>Experience luxury and comfort with sofas designed for modern interiors.</p>
-        <a href="{{ route('shop') }}#sofas">GET A QUOTE</a>
-      </div>
+    <div class="service-item">
+      <h3>Sofas</h3>
+      <p>
+        Experience luxury and comfort with sofas designed
+        for modern interiors.
+      </p>
+      <br>
+      <a href="shopping.html#sofas">GET A QUOTE</a>
     </div>
-  </section>
+  </div>
+</section>
+
 
   <!-- OUR WORK -->
-  <section class="our-work">
-    <div class="our-work-header">
-      <br><br>
-      <span>_____ OUR WORK _____</span>
-      <h2>More of our work</h2>
+<section class="our-work">
+
+  <div class="our-work-header">
+    <br><br>
+
+    <span>_____ OUR WORK _____</span>
+    <h2>More of our work</h2>
+  </div>
+
+  <div class="work-gallery">
+    <img src="images/D.jpeg" alt="Beitna Furniture work">
+    <img src="images/B.jpeg" alt="Beitna Furniture work">
+    <img src="images/C.jpeg" alt="Beitna Furniture work">
+    <img src="images/A.jpeg" alt="Beitna Furniture work">
+    <img src="images/E.jpeg" alt="Beitna Furniture work">
+    <img src="images/F.jpeg" alt="Beitna Furniture work">
+    <img src="images/I.jpeg" alt="Beitna Furniture work">
+    <img src="images/jj.jpeg" alt="Beitna Furniture work">
+    <img src="images/G.jpeg" alt="Beitna Furniture work">
+    <img src="images/kk.jpeg" alt="Beitna Furniture work">
+    
+  </div>
+
+</section>
+<!-- CUSTOMER REVIEW -->
+<section class="testimonial-section">
+  <div class="testimonial-card">
+
+    <div class="quote-icon">”</div>
+
+    <h3 class="testimonial-title">
+      Custom kitchen table is<br> a game-changer!
+    </h3>
+
+    <p class="testimonial-text">
+      Working with Beitna Furniture was a wonderful experience.
+      Seamless craftsmanship. Flawless quality.
+    </p>
+
+    <div class="testimonial-author">
+      <div class="author-avatar"></div>
+      <span>— Nour H.</span>
     </div>
 
-    <div class="work-gallery">
-      <img src="{{ asset('images/D.jpeg') }}" alt="Beitna Furniture work">
-      <img src="{{ asset('images/B.jpeg') }}" alt="Beitna Furniture work">
-      <img src="{{ asset('images/C.jpeg') }}" alt="Beitna Furniture work">
-      <img src="{{ asset('images/A.jpeg') }}" alt="Beitna Furniture work">
-      <img src="{{ asset('images/E.jpeg') }}" alt="Beitna Furniture work">
-      <img src="{{ asset('images/F.jpeg') }}" alt="Beitna Furniture work">
-      <img src="{{ asset('images/I.jpeg') }}" alt="Beitna Furniture work">
-      <img src="{{ asset('images/jj.jpeg') }}" alt="Beitna Furniture work">
-      <img src="{{ asset('images/G.jpeg') }}" alt="Beitna Furniture work">
-      <img src="{{ asset('images/kk.jpeg') }}" alt="Beitna Furniture work">
-    </div>
-  </section>
+  </div>
+</section>
 
-  <!-- TESTIMONIAL -->
-  <section class="testimonial-section">
-    <div class="testimonial-card">
-      <div class="quote-icon">"</div>
-      <h3 class="testimonial-title">Custom kitchen table is<br> a game-changer!</h3>
-      <p class="testimonial-text">
-        Working with Beitna Furniture was a wonderful experience.
-        Seamless craftsmanship. Flawless quality.
-      </p>
-      <div class="testimonial-author">
-        <div class="author-avatar"></div>
-        <span>— Nour H.</span>
-      </div>
-    </div>
-  </section>
+
 
   <!-- FOOTER -->
   <footer class="footer">
     <div class="footer-content">
+      <!-- Company Info -->
       <div class="footer-section footer-info">
         <h3>Beitna Furniture</h3>
-        <p>Luxury interior design and furniture craftsmanship. Creating beautiful spaces for over 25 years.</p>
+        <p>
+          Luxury interior design and furniture craftsmanship.
+          Creating beautiful spaces for over 25 years.
+        </p>
         <div class="social-links">
-          <a href="https://www.facebook.com/people/Beit-Al-Hajj/61586649204191/" title="Facebook">f</a>
+          <a href="https://www.facebook.com/people/Beit-Al-Hajj/61586649204191/?ref=PROFILE_EDIT_xav_ig_profile_page_web#" title="Facebook">f</a>
           <a href="https://www.instagram.com/beit_al_hajj/?hl=en" title="Instagram">@</a>
         </div>
       </div>
 
+      <!-- Quick Links -->
       <div class="footer-section">
         <h3>Quick Links</h3>
         <ul>
-          <li><a href="{{ route('home') }}">Home</a></li>
-          <li><a href="{{ route('login') }}">Login</a></li>
-          <li><a href="{{ route('register') }}">Register</a></li>
-          <li><a href="{{ route('shop') }}">Shop</a></li>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="login.html">Login</a></li>
+          <li><a href="register.html">Register</a></li>
+          <li><a href="shopping.html">Shop</a></li>
         </ul>
       </div>
 
+      <!-- Services -->
       <div class="footer-section">
         <h3>Services</h3>
         <ul>
@@ -188,18 +218,23 @@
         </ul>
       </div>
 
+      <!-- Contact Info -->
       <div class="footer-section footer-contact">
         <h3>Contact Info</h3>
-        <p><strong>Email:</strong><br><a href="mailto:hajjtaleb20@gmail.com" style="color:inherit">hajjtaleb20@gmail.com</a></p>
-        <p><strong>Phone:</strong><br><a href="tel:+96170833728" style="color:inherit">+961 70 83 37 28</a></p>
+        <p><strong>Email:</strong><br><a href="mailto:hajjtaleb20@gmail.com" style="color: inherit;">hajjtaleb20@gmail.com</a></p>
+        <p><strong>Phone:</strong><br><a href="tel:+96170833728" style="color: inherit;">+961 70 83 37 28</a></p>
         <p><strong>Location:</strong><br>Lebanon, UAE, KSA</p>
       </div>
     </div>
 
+    <!-- Footer Bottom -->
     <div class="footer-bottom">
-      <div class="footer-bottom-left">© 2026 Beitna Furniture. All rights reserved.</div>
+      <div class="footer-bottom-left">
+        © 2026 Beitna Furniture. All rights reserved.
+      </div>
     </div>
   </footer>
+  
 
   <script src="{{ asset('js/animation.js') }}"></script>
 

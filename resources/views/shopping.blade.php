@@ -10,108 +10,113 @@
 <body>
 
   <header class="header">
-    <nav class="nav">
-      <h1 class="logo">Beitna Furniture</h1>
+<nav class="nav">
+  <h1 class="logo">Beitna Furniture</h1>
 
-      <button class="hamburger" id="hamburger" onclick="toggleNav()">
-        <span></span><span></span><span></span>
-      </button>
-      <div class="nav-overlay" id="navOverlay" onclick="toggleNav()"></div>
-
-      <ul class="nav-links" id="nav-links">
-        <li><a href="{{ route('home') }}" onclick="toggleNav()">Home</a></li>
-        <li><a href="{{ route('shop') }}" onclick="toggleNav()">Shop</a></li>
-        <li><a href="{{ route('cart') }}" onclick="toggleNav()">Cart</a></li>
-        <li><a href="{{ route('login') }}" onclick="toggleNav()">Login</a></li>
-        <li><a href="{{ route('register') }}" onclick="toggleNav()">Register</a></li>
-      </ul>
-    </nav>
-  </header>
-
-  <section class="shop">
-    <p class="collection"> ---- OUR COLLECTION ----</p>
-    <h1>Shop Our Furniture</h1>
-    <p class="caption">Discover handcrafted pieces that blend comfort, style, and timeless design</p>
-  </section>
-
-  <section class="search-container">
-    <div class="search-bar">
-      <span class="search-icon">🔍</span>
-      <input type="text" placeholder="Search furniture..." />
-    </div>
-    <div class="btns">
-      <button type="button" class="active">All</button>
-      <button type="button">Chairs</button>
-      <button type="button">Tables</button>
-      <button type="button">Sofas</button>
-    </div>
-  </section>
-
-  <section class="cards">
-
-    <div class="card" id="chairs">
-      <img src="{{ asset('images/chair.jpeg') }}" alt="chair">
-      <div class="card-body">
-        <p class="card-category">CHAIRS</p>
-        <h3 class="card-title">Elegant Upholstered Armchair</h3>
-        <p class="card-desc">Premium wooden armchair with soft tufted upholstery and refined detailing</p>
-        <div class="card-footer">
-          <span class="card-price">$459</span>
-          <button class="card-btn" onclick="window.location.href='{{ route('cart') }}'">Add to Cart</button>
-        </div>
-      </div>
-    </div>
-
-    <div class="card" id="sofas">
-      <img src="{{ asset('images/sofa.jpeg') }}" alt="Sofa">
-      <div class="card-body">
-        <p class="card-category">SOFAS</p>
-        <h3 class="card-title">Velvet Blue Lounge Sofa</h3>
-        <p class="card-desc">Contemporary teal velvet sofa with bold color and an elegant form</p>
-        <div class="card-footer">
-          <span class="card-price">$2,459</span>
-          <button class="card-btn" onclick="window.location.href='{{ route('cart') }}'">Add to Cart</button>
-        </div>
-      </div>
-    </div>
-
-    <div class="card" id="tables">
-      <img src="{{ asset('images/table.jpeg') }}" alt="Table">
-      <div class="card-body">
-        <p class="card-category">TABLES</p>
-        <h3 class="card-title">Pixel Block Coffee Table</h3>
-        <p class="card-desc">Sculptural wooden coffee table with 3D geometric block design</p>
-        <div class="card-footer">
-          <span class="card-price">$1,259</span>
-          <button class="card-btn" onclick="window.location.href='{{ route('cart') }}'">Add to Cart</button>
-        </div>
-      </div>
-    </div>
-
-  </section>
-
+    <button class="hamburger" id="hamburger" onclick="toggleNav()">
+    <span></span><span></span><span></span>
+  </button>
+  <div class="nav-overlay" id="navOverlay" onclick="toggleNav()"></div>
+ <ul class="nav-links" id="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="shopping.html">Shop</a></li>
+    <li><a href="cart.html">Cart</a></li>
+    <li><a href="login.html">Login</a></li>
+    <li><a href="register.html">Register</a></li>
+  </ul>
+</nav>
+</header>
+<section class="shop">
+  <p class="collection"> ---- OUR COLLECTION ----</p>
+<h1> Shop Our Furniture</h1>
+<p class="caption">Discover handcrafted pieces that blend comfort, style, and timeless design</p>
+</section>
+<section class="search-container">
+  <div class="search-bar">
+    <span class="search-icon">🔍</span>
+    <input type="text" placeholder="Search furniture..." />
+  </div>
+ <div class="btns">
+<button type="button" class="active">All</button>
+<button type="button">Chairs</button>
+<button type="button">Tables</button>
+<button type="button">Sofas</button>
+ </div>
+</section>
+<section class="cards">
+  <div class="card" id="chairs">
+    <img src="images/chair.jpeg" alt="chair">
+    <div class="card-body"> 
+       <p class="card-category">CHAIRS</p>
+    <h3 class="card-title">Elegant Upholstered Armchair</h3>
+    <p class="card-desc">Premium wooden armchair with soft tufted upholstery and refined detailing</p>
+ <div class="card-footer">
+      <span class="card-price">$459</span>
+    <button class="card-btn" onclick="window.location.href='cart.html'">
+  Add to Cart
+</button>
+ </div>
+  </div>
+</div>
+  
+ <div class="card" id="sofas">
+    <img src="images/sofa.jpeg" alt="Sofa">
+    <div class="card-body"> 
+       <p class="card-category">SOFAS</p>
+    <h3 class="card-title">Velvet Blue Lounge Sofa</h3>
+    <p class="card-desc">Contemporary teal velvet sofa with bold color and an elegant form</p>
+ <div class="card-footer">
+      <span class="card-price">$2,459</span>
+   <button class="card-btn" onclick="window.location.href='cart.html'">
+  Add to Cart
+</button>
+ </div>
+  </div>
+</div>
+ <div class="card" id="tables">
+    <img src="images/table.jpeg" alt="Table">
+    <div class="card-body"> 
+       <p class="card-category">TABLES</p>
+    <h3 class="card-title">Pixel Block Coffee Table</h3>
+    <p class="card-desc">Sculptural wooden coffee table with 3D geometric block design</p>
+ <div class="card-footer">
+      <span class="card-price">$1,259</span>
+   <button class="card-btn" onclick="window.location.href='cart.html'">
+  Add to Cart
+</button>
+ </div>
+  </div>
+</div>
+</section>
+  
   <!-- FOOTER -->
   <footer class="footer">
     <div class="footer-content">
+      <!-- Company Info -->
       <div class="footer-section footer-info">
         <h3>Beitna Furniture</h3>
-        <p>Luxury interior design and furniture craftsmanship. Creating beautiful spaces for over 25 years.</p>
+        <p>
+          Luxury interior design and furniture craftsmanship.
+          Creating beautiful spaces for over 25 years.
+        </p>
         <div class="social-links">
-          <a href="https://www.facebook.com/people/Beit-Al-Hajj/61586649204191/" title="Facebook">f</a>
+          <a href="https://www.facebook.com/people/Beit-Al-Hajj/61586649204191/?ref=PROFILE_EDIT_xav_ig_profile_page_web#" title="Facebook">f</a>
           <a href="https://www.instagram.com/beit_al_hajj/?hl=en" title="Instagram">@</a>
         </div>
       </div>
 
+      <!-- Quick Links -->
       <div class="footer-section">
         <h3>Quick Links</h3>
         <ul>
-          <li><a href="{{ route('home') }}">Home</a></li>
-          <li><a href="{{ route('login') }}">Login</a></li>
-          <li><a href="{{ route('register') }}">Register</a></li>
-          <li><a href="{{ route('shop') }}">Shop</a></li>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="login.html">Login</a></li>
+          <li><a href="register.html">Register</a></li>
+          <li><a href="shopping.html">Shop</a></li>
         </ul>
       </div>
 
+      <!-- Services -->
       <div class="footer-section">
         <h3>Services</h3>
         <ul>
@@ -123,19 +128,23 @@
         </ul>
       </div>
 
+      <!-- Contact Info -->
       <div class="footer-section footer-contact">
         <h3>Contact Info</h3>
-        <p><strong>Email:</strong><br><a href="mailto:hajjtaleb20@gmail.com" style="color:inherit">hajjtaleb20@gmail.com</a></p>
-        <p><strong>Phone:</strong><br><a href="tel:+96170833728" style="color:inherit">+961 70 83 37 28</a></p>
+        <p><strong>Email:</strong><br><a href="mailto:hajjtaleb20@gmail.com" style="color: inherit;">hajjtaleb20@gmail.com</a></p>
+        <p><strong>Phone:</strong><br><a href="tel:+96170833728" style="color: inherit;">+961 70 83 37 28</a></p>
         <p><strong>Location:</strong><br>Lebanon, UAE, KSA</p>
       </div>
     </div>
 
+    <!-- Footer Bottom -->
     <div class="footer-bottom">
-      <div class="footer-bottom-left">© 2026 Beitna Furniture. All rights reserved.</div>
+      <div class="footer-bottom-left">
+        © 2026 Beitna Furniture. All rights reserved.
+      </div>
     </div>
   </footer>
-
+  
   <script src="{{ asset('js/animation.js') }}"></script>
   <script src="{{ asset('js/shopping.js') }}"></script>
 
