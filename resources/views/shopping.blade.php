@@ -81,7 +81,7 @@
     <p class="card-desc">Sculptural wooden coffee table with 3D geometric block design</p>
  <div class="card-footer">
       <span class="card-price">$1,259</span>
-   <button class="card-btn" onclick="window.location.href='{{ route("cart") }}'">
+   <button class="card-btn" onclick="window.location.href='{{ route("cart") }}' ">
   Add to Cart
 </button>
  </div>
