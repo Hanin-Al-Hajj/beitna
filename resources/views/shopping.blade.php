@@ -45,13 +45,13 @@
 </section>
 <section class="cards">
   <div class="card" id="chairs">
-    <img src="images/chair.jpeg" alt="chair">
+    <img src="images/chair.jpeg" alt="chair" name="image">
     <div class="card-body">
-       <p class="card-category">CHAIRS</p>
-    <h3 class="card-title">Elegant Upholstered Armchair</h3>
-    <p class="card-desc">Premium wooden armchair with soft tufted upholstery and refined detailing</p>
+       <p class="card-category" name="category">CHAIRS</p>
+    <h3 class="card-title" name="name">Elegant Upholstered Armchair</h3>
+    <p class="card-desc" name="description">Premium wooden armchair with soft tufted upholstery and refined detailing</p>
  <div class="card-footer">
-      <span class="card-price">$459</span>
+      <span class="card-price" name="price">$459</span>
     <button class="card-btn" onclick="window.location.href='{{ route("cart") }}'">
   Add to Cart
 </button>

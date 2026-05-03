@@ -3,20 +3,27 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
-use App\Models\CartItem; 
+use Illuminate\Database\Eloquent\Relations\HasMany;
+use App\Models\CartItem;
 
 class Product extends Model
 {
     protected $fillable=[
-        'category',
-        'name',
-        'description',
-        'price',
-        'image',
+       'image',
+       'category',
+       'name',
+       'description',
+       'price',
+
     ];
 
     public function cartItems()
     {
         return $this->hasMany(CartItem::class);
     }
+  public function orderItems(): HasMany
+    {
+        return $this->hasMany(OrderItem::class);
+    }
+
 }

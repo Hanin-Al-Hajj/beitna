@@ -35,7 +35,7 @@
   <div id="cart-items" class="cart-items"></div>
 
   <div class="cart-summary">
-    <div id="total-price" class="total">Total: $0</div>
+    <div id="total-price" class="total" name="total-price">Total: $0</div>
     <button class="checkout-btn" onclick="showOrderForm()">Place Order</button>
   </div>
 </section>
@@ -73,7 +73,7 @@
 
    <div class="form-input">
     <label for="price">Total Price:</label>
-    <input type="text" name="price" id="price" readonly>
+    <input type="text" name="total_price" id="price" readonly>
   </div>
  <div class="form-button">
    <button type="submit">Confirm Order</button>
