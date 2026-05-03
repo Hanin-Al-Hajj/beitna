@@ -18,11 +18,11 @@
   </button>
   <div class="nav-overlay" id="navOverlay" onclick="toggleNav()"></div>
  <ul class="nav-links" id="nav-links">
-    <li><a href="{{ route('homePage') }}">Home</a></li>
-    <li><a href="{{ route('shop') }}">Shop</a></li>
-    <li><a href="{{ route('cart') }}">Cart</a></li>
-    <li><a href="{{ route('login') }}">Login</a></li>
-    <li><a href="{{ route('register') }}">Register</a></li>
+    <li><a href="{{ route("homePage")}}">Home</a></li>
+    <li><a href="{{ route("shop") }}">Shop</a></li>
+    <li><a href="{{ route("cart") }}">Cart</a></li>
+    <li><a href="{{ route("login") }}">Login</a></li>
+    <li><a href="{{ route("register") }}">Register</a></li>
   </ul>
 </nav>
 </header>
@@ -104,7 +104,7 @@
         Discover unique chairs that blend comfort and style.
         Handcrafted with attention to detail.
       </p>
-      <a href="{{ route('shop') }}#chairs">GET A QUOTE</a>
+      <a href="{{ route("shop") }}#chairs">GET A QUOTE</a>
     </div>
 
     <div class="service-item">
