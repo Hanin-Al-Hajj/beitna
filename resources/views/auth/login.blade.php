@@ -12,7 +12,8 @@
             <h2>Log In</h2>
             <p class="p1">Welcome back to your home at Beltna </p>
 
-            <form action="/login" method="post">
+            <form action="{{ route('login') }}" method="POST">
+              @csrf
               <div class="input"> <label for="email">Email</label>
                 <input type="email" name="email" placeholder="Enter your email" required></div>
 

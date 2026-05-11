@@ -18,12 +18,36 @@
   </button>
   <div class="nav-overlay" id="navOverlay" onclick="toggleNav()"></div>
  <ul class="nav-links" id="nav-links">
-    <li><a href="{{ route("homePage") }}">Home</a></li>
-    <li><a href="{{ route("shop") }}">Shop</a></li>
-    <li><a href="{{ route("cart") }}">Cart</a></li>
-    <li><a href="{{ route("login") }}">Login</a></li>
-    <li><a href="{{ route("register") }}">Register</a></li>
-  </ul>
+  <li><a href="{{ route('home') }}" onclick="toggleNav()">Home</a></li>
+  <li><a href="{{ route('shop') }}" onclick="toggleNav()">Shop</a></li>
+  <li><a href="{{ route('cart') }}" onclick="toggleNav()">Cart</a></li>
+
+ 
+  @guest
+    <li><a href="{{ route('login') }}" onclick="toggleNav()">Login</a></li>
+    <li><a href="{{ route('register') }}" onclick="toggleNav()">Register</a></li>
+  @endguest
+
+ 
+  @auth
+
+    <li>
+      <form method="POST" action="{{ route('logout') }}">
+        @csrf
+        <button type="submit" style="
+          background: none;
+          border: none;
+          color: #2b2b2b;
+          font-weight: 500;
+          cursor: pointer;
+          font-size: 1rem;
+          padding: 0;
+          font-family: inherit;
+        ">Logout</button>
+      </form>
+    </li>
+  @endauth
+</ul>
 </nav>
 </header>
 <section class="shop">
@@ -109,7 +133,7 @@
       <div class="footer-section">
         <h3>Quick Links</h3>
         <ul>
-          <li><a href="{{ route("homePage") }}">Home</a></li>
+          <li><a href="{{ route("home") }}">Home</a></li>
           <li><a href="{{ route("login") }}">Login</a></li>
           <li><a href="{{ route("register") }}">Register</a></li>
           <li><a href="{{ route("shop") }}">Shop</a></li>
