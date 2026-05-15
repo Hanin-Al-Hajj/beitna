@@ -4,7 +4,6 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\HasMany;
-use App\Models\CartItem;
 use App\Models\Orderitem;
 
 class Product extends Model
@@ -18,10 +17,6 @@ class Product extends Model
 
     ];
 
-    public function cartItems()
-    {
-        return $this->hasMany(CartItem::class);
-    }
   public function orderItems(): HasMany
     {
         return $this->hasMany(Orderitem::class);

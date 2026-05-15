@@ -24,13 +24,12 @@
   <li><a href="{{ route('shop') }}" onclick="toggleNav()">Shop</a></li>
   <li><a href="{{ route('cart') }}" onclick="toggleNav()">Cart</a></li>
 
- 
+
   @guest
     <li><a href="{{ route('login') }}" onclick="toggleNav()">Login</a></li>
     <li><a href="{{ route('register') }}" onclick="toggleNav()">Register</a></li>
   @endguest
 
- 
   @auth
 
     <li>
@@ -52,7 +51,6 @@
 </ul>
   </nav>
 </header>
-
 <section class="cart-section">
   <h1 class="cart-title">Your Cart</h1>
 
@@ -64,11 +62,14 @@
   </div>
 </section>
 
+
+
 <section class="order-section" id="order-section" style="display: none;">
 <h2>Complete Your Order</h2>
 <p class="order-subtitle">Every piece deserves a home — tell us where to bring yours</p>
-<form action="POST" class="order-form" id="order-form">
-  <div class="form-label"><span>Personal Information</span></div>
+<form  method="POST"action="{{ route('order.store') }}" class="order-form" id="order-form">
+  @csrf
+    <div class="form-label"><span>Personal Information</span></div>
 
   <div class="form-input">
     <label for="fname">First Name:</label>
@@ -97,7 +98,7 @@
 
    <div class="form-input">
     <label for="price">Total Price:</label>
-    <input type="text" name="total_price" id="price" readonly>
+    <input type="text" placeholder="$0.00" id="price" readonly>
   </div>
  <div class="form-button">
    <button type="submit">Confirm Order</button>

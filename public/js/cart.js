@@ -59,11 +59,9 @@ function renderCart() {
 function changeQty(index, delta) {
   cart[index].qty += delta;
 
-  if (cart[index].qty < 1) {
+  if (cart[index].qty < 1)
     // Remove item if quantity drops below 1
     cart.splice(index, 1);
-  }
-
   saveCart();
   renderCart();
 }
@@ -74,7 +72,6 @@ function removeItem(index) {
   renderCart();
 }
 
-renderCart();
 
 function showOrderForm(){
   const orderSection=document.getElementById("order-section");
@@ -87,3 +84,47 @@ function showOrderForm(){
     priceField.value = '$' + total.toFixed(2);
   }
 }
+
+// this script convert cart data into hidden inputs that laravel will receive
+
+document.addEventListener('DOMContentLoaded',() => {
+const form = document.getElementById('order-form');
+if(!form) return;
+
+ form.addEventListener("submit", (e) => {
+  if (cart.length === 0) {
+      e.preventDefault();
+      alert("Your cart is empty!");
+      return;
+}
+
+form.querySelectorAll(".cart-hidden").forEach(el => el.remove());
+   const hiddenTotal = document.createElement("input");
+    hiddenTotal.type  = "hidden";
+    hiddenTotal.name  = "total_price";
+    hiddenTotal.value = total.toFixed(2);
+    hiddenTotal.classList.add("cart-hidden");
+    form.appendChild(hiddenTotal);
+
+    cart.forEach((item, i) => {
+      const fields = {
+        product_id: item.id,
+        name:       item.title,
+        category:   item.category,
+        price:      item.price,
+        qty:        item.qty,
+      };
+
+      Object.entries(fields).forEach(([key, value]) => {
+        const input   = document.createElement("input");
+        input.type    = "hidden";
+        input.name    = `items[${i}][${key}]`;
+        input.value   = value ?? "";
+        input.classList.add("cart-hidden");
+        form.appendChild(input);
+      });
+    });
+  });
+});
+
+renderCart();

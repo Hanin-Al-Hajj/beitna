@@ -22,13 +22,13 @@
   <li><a href="{{ route('shop') }}" onclick="toggleNav()">Shop</a></li>
   <li><a href="{{ route('cart') }}" onclick="toggleNav()">Cart</a></li>
 
- 
+
   @guest
     <li><a href="{{ route('login') }}" onclick="toggleNav()">Login</a></li>
     <li><a href="{{ route('register') }}" onclick="toggleNav()">Register</a></li>
   @endguest
 
- 
+
   @auth
 
     <li>
@@ -68,7 +68,7 @@
  </div>
 </section>
 <section class="cards">
-  <div class="card" id="chairs">
+  <div class="card" data-id="1">
     <img src="images/chair.jpeg" alt="chair" name="image">
     <div class="card-body">
        <p class="card-category" name="category">CHAIRS</p>
@@ -76,14 +76,14 @@
     <p class="card-desc" name="description">Premium wooden armchair with soft tufted upholstery and refined detailing</p>
  <div class="card-footer">
       <span class="card-price" name="price">$459</span>
-    <button class="card-btn" onclick="window.location.href='{{ route("cart") }}'">
+    <button class="card-btn">
   Add to Cart
 </button>
  </div>
   </div>
 </div>
 
- <div class="card" id="sofas">
+ <div class="card" data-id="2">
     <img src="images/sofa.jpeg" alt="Sofa">
     <div class="card-body">
        <p class="card-category">SOFAS</p>
@@ -91,13 +91,13 @@
     <p class="card-desc">Contemporary teal velvet sofa with bold color and an elegant form</p>
  <div class="card-footer">
       <span class="card-price">$2,459</span>
-   <button class="card-btn" onclick="window.location.href='{{ route("cart") }}'">
+   <button class="card-btn">
   Add to Cart
 </button>
  </div>
   </div>
 </div>
- <div class="card" id="tables">
+ <div class="card" data-id="3">
     <img src="images/table.jpeg" alt="Table">
     <div class="card-body">
        <p class="card-category">TABLES</p>
@@ -105,7 +105,7 @@
     <p class="card-desc">Sculptural wooden coffee table with 3D geometric block design</p>
  <div class="card-footer">
       <span class="card-price">$1,259</span>
-   <button class="card-btn" onclick="window.location.href='{{ route("cart") }}' ">
+   <button class="card-btn">
   Add to Cart
 </button>
  </div>

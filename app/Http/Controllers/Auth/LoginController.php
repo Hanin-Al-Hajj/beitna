@@ -8,16 +8,20 @@ use Illuminate\Support\Facades\Auth;
 
 class LoginController extends Controller
 {
- 
+
     public function create()
     {
+
+   if (Auth::check()) {
+            return redirect()->route('home');
+        }
         return view('auth.login');
     }
 
-  
+
     public function store(Request $request)
     {
-        
+
         $request->validate([
             'email'    => 'required|email',
             'password' => 'required',
@@ -28,7 +32,7 @@ class LoginController extends Controller
             'password' => $request->password
         ])) {
             $request->session()->regenerate();
-            return redirect()->route('home');
+            return redirect()->route('cart');
         }
 
 
@@ -37,7 +41,7 @@ class LoginController extends Controller
         ])->onlyInput('email');
     }
 
-    
+
     public function destroy(Request $request)
     {
         Auth::logout();

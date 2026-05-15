@@ -56,9 +56,12 @@ buttons.forEach(button => {
     const card = button.closest(".card");
 
     const product = {
-      title: card.querySelector(".card-title").textContent,
-      price: parseInt(card.querySelector(".card-price").textContent.replace("$", "").replace(",", "")),
-      image: card.querySelector("img").src
+      id:       card.dataset.id,
+  title:    card.querySelector(".card-title").textContent.trim(),
+  category: card.querySelector(".card-category").textContent.trim(),
+  price:    parseFloat(card.querySelector(".card-price").textContent.replace("$", "").replace(",", "")),
+  image:    card.querySelector("img").src,
+  qty:      1
     };
 
     let cart = JSON.parse(localStorage.getItem("cart")) || [];
