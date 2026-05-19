@@ -5,6 +5,7 @@ let cart = JSON.parse(localStorage.getItem("cart")) || [];
 cart = cart.map(item => ({ ...item, qty: item.qty || 1 }));
 
 const container = document.getElementById("cart-items");
+const checkoutBtn = document.getElementById("checkout-btn");
 const totalEl   = document.getElementById("total-price");
 let total =0;
 function saveCart() {
@@ -14,11 +15,30 @@ function saveCart() {
 function renderCart() {
   container.innerHTML = "";
 
-  if (cart.length === 0) {
-    container.innerHTML = "<p class='empty'>Your cart is empty</p>";
-    totalEl.textContent = "Total: $0";
-    return;
+if (cart.length === 0) {
+  total = 0;
+  container.innerHTML = "<p class='empty'>Your cart is empty</p>";
+  totalEl.textContent = "Total: $0";
+
+  if (checkoutBtn) {
+    checkoutBtn.disabled = true;
+    checkoutBtn.style.opacity = "0.5";
+    checkoutBtn.style.cursor = "not-allowed";
   }
+
+  const orderSection = document.getElementById("order-section");
+  if (orderSection) {
+    orderSection.style.display = "none";
+  }
+
+  return;
+}
+
+if (checkoutBtn) {
+  checkoutBtn.disabled = false;
+  checkoutBtn.style.opacity = "1";
+  checkoutBtn.style.cursor = "pointer";
+}
 
   total = 0;
 
@@ -74,14 +94,18 @@ function removeItem(index) {
 
 
 function showOrderForm(){
-  const orderSection=document.getElementById("order-section");
-  orderSection.style.display='block';
-  orderSection.scrollIntoView({behavior:'smooth'});
+  if (cart.length === 0) {
+    alert("Your cart is empty!");
+    return;
+  }
 
+  const orderSection = document.getElementById("order-section");
+  orderSection.style.display = "block";
+  orderSection.scrollIntoView({ behavior: "smooth" });
 
-  const priceField = document.getElementById('price');
+  const priceField = document.getElementById("price");
   if (priceField) {
-    priceField.value = '$' + total.toFixed(2);
+    priceField.value = "$" + total.toFixed(2);
   }
 }
 

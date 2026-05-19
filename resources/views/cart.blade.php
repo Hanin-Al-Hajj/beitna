@@ -8,7 +8,6 @@
   <link rel="stylesheet" href="{{ asset('css/cart.css') }}">
 </head>
 <body>
-
  <header class="header">
   <nav class="nav">
     <h1 class="logo">Beitna Furniture</h1>
@@ -54,12 +53,29 @@
 <section class="cart-section">
   <h1 class="cart-title">Your Cart</h1>
 
+@if (session('order_success'))
+  <div class="success-message">
+    Your order has been placed successfully!
+  </div>
+
+  <script>
+    localStorage.removeItem("cart");
+  </script>
+@endif
+
   <div id="cart-items" class="cart-items"></div>
 
-  <div class="cart-summary">
-    <div id="total-price" class="total" name="total-price">Total: $0</div>
-    <button class="checkout-btn" onclick="showOrderForm()">Place Order</button>
-  </div>
+ <div class="cart-summary">
+  <div id="total-price" class="total">Total: $0</div>
+
+  @auth
+<button class="checkout-btn" id="checkout-btn" onclick="showOrderForm()">Place Order</button>
+  @endauth
+
+  @guest
+    <a href="{{ route('login') }}" class="checkout-btn">Place Order</a>
+  @endguest
+</div>
 </section>
 
 
@@ -67,7 +83,7 @@
 <section class="order-section" id="order-section" style="display: none;">
 <h2>Complete Your Order</h2>
 <p class="order-subtitle">Every piece deserves a home — tell us where to bring yours</p>
-<form  method="POST"action="{{ route('order.store') }}" class="order-form" id="order-form">
+<form  method="POST" action="{{ route('order.store') }}" class="order-form" id="order-form">
   @csrf
     <div class="form-label"><span>Personal Information</span></div>
 
@@ -98,7 +114,7 @@
 
    <div class="form-input">
     <label for="price">Total Price:</label>
-    <input type="text" placeholder="$0.00" id="price" readonly>
+    <input type="text" id="price" placeholder="$0.00" readonly>
   </div>
  <div class="form-button">
    <button type="submit">Confirm Order</button>
@@ -108,6 +124,5 @@
 
   <script src="{{ asset('js/cart.js') }}"></script>
   <script src="{{ asset('js/animation.js') }}"></script>
-
 </body>
 </html>

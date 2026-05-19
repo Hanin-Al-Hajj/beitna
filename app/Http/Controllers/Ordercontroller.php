@@ -12,7 +12,9 @@ use Illuminate\Support\Facades\Auth;
 class Ordercontroller extends Controller
 {
 public function store(Request $request){
+
  $request->validate([
+    
 'fname' =>'required|string|max:255',
 'lname' =>'required|string|max:255',
 'email' =>'required|email',
@@ -47,7 +49,10 @@ public function store(Request $request){
             ]);
         }
 
-return redirect()->route('cart');
+        
+return redirect()->route('cart')->with('order_success', true);
+
+
 }
 
 }
