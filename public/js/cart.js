@@ -1,5 +1,6 @@
 // Load cart from localStorage. Each item: { title, price, image, qty }
-let cart = JSON.parse(localStorage.getItem("cart")) || [];
+const CART_KEY = window.cartStorageKey || "cart_guest";
+let cart = JSON.parse(localStorage.getItem(CART_KEY)) || [];
 
 // Normalise legacy items that don't have a qty field
 cart = cart.map(item => ({ ...item, qty: item.qty || 1 }));
@@ -8,8 +9,9 @@ const container = document.getElementById("cart-items");
 const checkoutBtn = document.getElementById("checkout-btn");
 const totalEl   = document.getElementById("total-price");
 let total =0;
+
 function saveCart() {
-  localStorage.setItem("cart", JSON.stringify(cart));
+  localStorage.setItem(CART_KEY, JSON.stringify(cart));
 }
 
 function renderCart() {

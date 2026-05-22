@@ -850,4 +850,26 @@ section {
   color: var(--color-white);
   transform: none;
 }
+
+}
+
+
+.logout-form {
+  margin: 0;
+}
+
+.nav-logout-btn {
+  background: none;
+  border: none;
+  color: var(--color-charcoal);
+  font-weight: 400;
+  font-size: 0.88rem;
+  letter-spacing: 0.8px;
+  padding: 0.4rem 0.8rem;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.nav-logout-btn:hover {
+  color: var(--color-brown);
 }

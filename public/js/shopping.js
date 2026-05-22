@@ -64,10 +64,11 @@ buttons.forEach(button => {
   qty:      1
     };
 
-    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+  const CART_KEY = window.cartStorageKey || "cart_guest";
+  let cart = JSON.parse(localStorage.getItem(CART_KEY)) || [];
     cart.push(product);
 
-    localStorage.setItem("cart", JSON.stringify(cart));
+   localStorage.setItem(CART_KEY, JSON.stringify(cart));
 
     alert("Added to cart!");
   });

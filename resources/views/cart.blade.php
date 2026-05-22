@@ -31,21 +31,12 @@
 
   @auth
 
-    <li>
-      <form method="POST" action="{{ route('logout') }}">
-        @csrf
-        <button type="submit" style="
-          background: none;
-          border: none;
-          color: #2b2b2b;
-          font-weight: 500;
-          cursor: pointer;
-          font-size: 1rem;
-          padding: 0;
-          font-family: inherit;
-        ">Logout</button>
-      </form>
-    </li>
+  <li>
+  <form method="POST" action="{{ route('logout') }}" class="logout-form">
+    @csrf
+    <button type="submit" class="nav-logout-btn">Logout</button>
+  </form>
+</li>
   @endauth
 </ul>
   </nav>
@@ -59,7 +50,7 @@
   </div>
 
   <script>
-    localStorage.removeItem("cart");
+   localStorage.removeItem(window.cartStorageKey);
   </script>
 @endif
 
@@ -121,6 +112,10 @@
   </div>
 </form>
 </section>
+
+<script>
+  window.cartStorageKey = @json(auth()->check() ? 'cart_user_' . auth()->id() : 'cart_guest');
+</script>
 
   <script src="{{ asset('js/cart.js') }}"></script>
   <script src="{{ asset('js/animation.js') }}"></script>
