@@ -12,7 +12,7 @@ class LoginController extends Controller
     public function create()
     {
 
-   if (Auth::check()) {
+        if (Auth::check()) {
             return redirect()->route('home');
         }
         return view('auth.login');

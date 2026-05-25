@@ -44,6 +44,10 @@
 <section class="cart-section">
   <h1 class="cart-title">Your Cart</h1>
 
+  <script>
+  window.cartStorageKey = @json(auth()->check() ? 'cart_user_' . auth()->id() : 'cart_guest');
+</script>
+
 @if (session('order_success'))
   <div class="success-message">
     Your order has been placed successfully!
@@ -113,9 +117,7 @@
 </form>
 </section>
 
-<script>
-  window.cartStorageKey = @json(auth()->check() ? 'cart_user_' . auth()->id() : 'cart_guest');
-</script>
+
 
   <script src="{{ asset('js/cart.js') }}"></script>
   <script src="{{ asset('js/animation.js') }}"></script>
